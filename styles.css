@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('assets/lake3.jpg'); /* Use the correct image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-right: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  
+  
+  #timer,
+  #highest-score,
+  #score {
+    font-size: 18px;
+    margin-right: 20px; /* Add some right margin between elements */
+  }
+  
+  #restart-button {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Add right margin to separate from duration buttons */
+  }
+  
+  #crocodile {
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: calc(50% - 25px); /* Center horizontally */
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: scale(0.5); /* Scale down by 50% */
+    display: none;
+    transition: bottom 0.5s;
+    user-select: none;
+    
+     /* Ensure crocodile is above the background */
+  }
+  
+  
+  
+  /* Update button styles */
+  .btn-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .btn-outline-primary {
+    background-color: transparent;
+    border: 1px solid #3498db;
+    color: #3498db;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #3498db;
+    border-color: #2980b9;
+    color: white;
+  }
+  
+  
+  /* Small screens (iPhone 14 viewport) */
+@media (max-width: 428px) {
+  #top-bar {
+    padding: 5px; /* Reduce padding for top bar */
+  }
+
+  #timer,
+  #highest-score,
+  #score {
+    font-size: 14px; /* Decrease font size for top bar elements */
+  }
+
+  .btn {
+    padding: 5px 10px; /* Adjust button padding for smaller screens */
+    font-size: 14px; /* Decrease button font size */
+  }
+
+  #restart-button {
+    margin-right: 10px; /* Decrease margin for restart button */
+  }
+
+  #duration-options {
+    flex-direction: column; /* Stack duration buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+  }
+
+  #game-container {
+    margin-top: 20px; /* Add some spacing below the top bar */
+  }
+
+  #crocodile {
+    width: 100px; /* Adjust crocodile width */
+  }
+}
+
+  

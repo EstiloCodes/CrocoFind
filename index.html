@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrocoFind</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="game-wraper">
+      <div id="top-bar">
+        <div id="timer">Time: <span id="timer-value">0:00</span></div>
+        <div id="highest-score">
+          Highest Score: <span id="highest-score-value">0</span>
+
+        </div>
+        <div id="score">Score: <span id="score-value">0</span></div>
+       
+        <div id="duration-options" class="btn-group">
+          <button id="duration-1min" class="btn btn-outline-primary" data-duration="60">
+            1 min
+          </button>
+          <button id="duration-3min" class="btn btn-outline-primary" data-duration="180">
+            3 mins
+          </button>
+          <button id="duration-5min" class="btn btn-outline-primary" data-duration="300">
+            5 mins
+          </button>
+          
+        </div>
+        <div id="restart-button">
+          <button id="restart" class="btn btn-outline-primary">Restart</button>
+        </div>
+       
+      
+        <div id="instructions">Please choose a time to start the game</div>
+        
+      </div>
+      
+        <div id="game-container">
+          <img id="crocodile" src="assets/funny-crocodile-cartoon-characte-removebg-preview.png" alt="Crocodile" draggable="false" />
+        </div>
+     
+
+    <script src="script.js"></script>
+  </body>
+</html>
