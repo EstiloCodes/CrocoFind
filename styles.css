@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
 body {
     margin: 0;
     display: flex;
@@ -6,7 +7,7 @@ body {
     justify-content: center;
     height: 100vh;
     font-family: Arial, sans-serif;
-    background-image: url('assets/lake3.jpg'); /* Use the correct image path */
+    background-image: url('assets/lake3.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -23,6 +24,7 @@ body {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    user-select: none;
   }
   
   
@@ -31,36 +33,37 @@ body {
   #highest-score,
   #score {
     font-size: 18px;
-    margin-right: 20px; /* Add some right margin between elements */
+    margin-right: 20px; 
   }
   
   #restart-button {
     display: flex;
     align-items: center;
-    margin-right: 20px; /* Add right margin to separate from duration buttons */
+    margin-right: 20px; 
   }
   
   #crocodile {
     position: absolute;
-    bottom: 0; /* Position at the bottom */
+    bottom: 0; 
     left: calc(50% - 25px); /* Center horizontally */
-    width: 200px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    transform: scale(0.5); /* Scale down by 50% */
+    width: 200px; 
+    height: auto; 
+    transform: scale(0.5); 
     display: none;
     transition: bottom 0.5s;
     user-select: none;
     
-     /* Ensure crocodile is above the background */
+     
   }
   
   
   
-  /* Update button styles */
+  
   .btn-group {
     display: flex;
     gap: 10px;
     align-items: center;
+    user-select: none;
   }
   
   .btn {
@@ -89,40 +92,54 @@ body {
     border-color: #2980b9;
     color: white;
   }
+  #game-name {
+    font-size: 30px;
+    color: rgb(158, 34, 108);
+    margin-top: 10px; 
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+  position: absolute;
+  top: 70px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  }
   
   
-  /* Small screens (iPhone 14 viewport) */
-@media (max-width: 428px) {
+  /* Hamburger menu */
+@media (max-width: 660px) {
   #top-bar {
-    padding: 5px; /* Reduce padding for top bar */
+    padding: 5px; 
+  }
+  #game-name {
+    display: none;
   }
 
   #timer,
   #highest-score,
   #score {
-    font-size: 14px; /* Decrease font size for top bar elements */
+    font-size: 14px; 
   }
 
   .btn {
-    padding: 5px 10px; /* Adjust button padding for smaller screens */
-    font-size: 14px; /* Decrease button font size */
+    padding: 5px 10px; 
+    font-size: 14px; 
   }
 
   #restart-button {
-    margin-right: 10px; /* Decrease margin for restart button */
+    margin-right: 10px; 
   }
 
   #duration-options {
-    flex-direction: column; /* Stack duration buttons vertically */
-    align-items: flex-start; /* Align buttons to the left */
+    flex-direction: column; 
+    align-items: flex-start; 
   }
 
   #game-container {
-    margin-top: 20px; /* Add some spacing below the top bar */
+    margin-top: 20px; 
   }
 
   #crocodile {
-    width: 100px; /* Adjust crocodile width */
+    width: 100px; 
   }
 }
 
